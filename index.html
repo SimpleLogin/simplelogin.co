@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>SimpleLogin - Gestiona tus contraseñas en tu almacenamiento de confianza</title>
+        <meta name="description" content="¿Demasiadas contraseñas en tu cabeza? Con SimpleLogin podrás gestionarlas de forma rápida y segura. Siempre las tendrás a mano desde tu almacenamiento de confianza como Dropbox, Google Drive o Box.">
+        <meta name="author" content="SimpleLogin">
+        <meta name="viewport" content="width=device-width">
+
+        <meta property="og:title" content="SimpleLogin - Gestiona tus contraseñas en tu almacenamiento de confianza"/>
+        <meta property="og:type" content="company"/>
+        <meta property="og:site_name" content="SimpleLogin - Gestiona tus contraseñas en tu almacenamiento de confianza"/>
+        <meta property="og:description" content="¿Demasiadas contraseñas en tu cabeza? Con SimpleLogin podrás gestionarlas de forma rápida y segura. Siempre las tendrás a mano desde tu almacenamiento de confianza como Dropbox, Google Drive o Box." />
+        <meta property="og:url" content="https://simplelogin.co" />
+        <meta property="og:image" content="https://static.simplelogin.co/img/og.png"/>
+        <meta property="fb:admins" content="716943248" />
+        <meta property="fb:app_id" content="216812425124910" />
+
+        <link rel="shortcut icon" href="/favicon.ico">
+        <link rel="icon" type="image/png" href="/favicon.png">
+
+        <link rel="stylesheet" href="https://static.simplelogin.co/css/bootstrap.css">
+        <link rel="stylesheet" href="https://static.simplelogin.co/css/bootstrap-responsive.css">
+        <link rel="stylesheet" href="https://static.simplelogin.co/css/font-awesome.css">
+        <link rel="stylesheet" href="https://static.simplelogin.co/js/jquery/fancybox/jquery.fancybox.css">
+        <link rel="stylesheet" href="https://static.simplelogin.co/css/main.css">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <a class="brand" href="/">
+                        <img src="https://static.simplelogin.co/img/logotipo-60.png" alt="SimpleLogin logo">
+                    </a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav">
+                            <li><a href="/security">Seguridad</a></li>
+                            <li><a href="http://blog.simplelogin.co">Blog</a></li>
+                            <li><a href="http://blog.simplelogin.co/about">Acerca</a></li>
+                            <li><a href="/plans">Planes y precios</a></li>
+                            <li><a href="http://blog.simplelogin.co/contact">Contacto</a></li>
+                        </ul>
+                        <a href="https://app.simplelogin.co" class="btn pull-right"><i class="icon-ok"></i> Ingresar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container content container-fluid">
+            <div class="row-fluid">
+                <div class="span6 visible-desktop">
+                    <img src="https://static.simplelogin.co/img/home/devices.png" alt="Devices">
+                </div>
+                <div class="span6">
+                    <div id="app-name">
+                        <h1 class="text-info" style="font-weight:normal">¿Demasiadas contraseñas?</h1>
+                    </div>
+
+                    <div id="tagline">
+                        Con <span class="text-info">SimpleLogin</span> podrás gestionarlas de forma rápida y segura.
+                    </div>
+
+                    <div class="hidden-desktop" id="phones">
+                        <img src="https://static.simplelogin.co/img/home/devices.png" alt="Devices">
+                    </div>
+
+                    <div id="description">
+                        <span class="text-info">SimpleLogin</span> cifra y almacena tus cuentas en un solo lugar.<br>
+                        Podrás acceder desde cualquier dispositivo y siempre las tendrás a mano desde tu almacenamiento de confianza como <strong>Dropbox, Google Drive o Box</strong>.
+                    </div>
+
+                    <ul id="features-header">
+                        <li>Generador de contraseñas fuertes</li>
+                        <li>Grupos para organizar tus credenciales</li>
+                        <li>Copias de seguridad</li>
+                        <li>Cuentas aseguradas con <a href="http://codahale.com/how-to-safely-store-a-password/" target="_blank">bcrypt</a> y <a href="http://en.wikipedia.org/wiki/PBKDF2" target="_blank">PBKDF2</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="row-fluid">
+                <div class="span6" id="wideo">
+                    <a data-fancybox-type="iframe" href="http://www.wideo.co/embed/7721370631526841?height=450&amp;width=800">
+                        <span>
+                            <img src="https://static.simplelogin.co/img/home/play.png" alt="play">
+                            ¿Qué es SimpleLogin?
+                        </span>
+                    </a>
+                </div>
+                <div class="span6" id="download">
+                    <a href="https://play.google.com/store/apps/details?id=com.simplelogin.app" class="span6">
+                        <img src="https://developer.android.com/images/brand/es-419_app_rgb_wo_60.png" alt="Android app on Google Play"><br>
+                    </a>
+                    <a href="#" class="span6" title="Muy pronto...">
+                        <img src="https://static.simplelogin.co/img/home/app_store_badge.png" alt="App Store">
+                    </a>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="row-fluid" id="features">
+                <div class="span4">
+                    <h3 class="text-info"><i class="icon-lock"></i> Seguro</h3>
+                    Tus datos se cifran/descifran únicamente en tu dispositivo, utilizando <a href="http://es.wikipedia.org/wiki/Advanced_Encryption_Standard" target="_blank">AES-256</a>.
+                </div>
+                <div class="span4">
+                    <h3 class="text-info"><i class="icon-time"></i> Rápido</h3>
+                    Ya no pierdas tiempo tipeando e iniciando sesiones.<br>
+                    Con un clic, SimpleLogin lo hace por tí.
+                </div>
+                <div class="span4">
+                    <h3 class="text-info"><i class="icon-star"></i> Gratis</h3>
+                    Utilízalo en todos los dispositivos que desees.<br>
+                    Cuando desees, las veces que desees.
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="well well-small hidden-phone social-share">
+                <div class="tw">
+                    <a href="https://twitter.com/share" class="twitter-share-button" data-url="https://simplelogin.co" data-via="SimpleLoginApp">Tweet</a>
+                </div>
+                <div class="fb">
+                    <div class="fb-like" data-href="https://simplelogin.co" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false"></div>
+                </div>
+                <div class="gplus">
+                    <div class="g-plusone" data-size="medium" data-href="https://simplelogin.co"></div>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="row-fluid" id="screenshots">
+                <h2 class="page-title">Capturas</h2>
+                <ul class="thumbnails">
+                    <li class="span4">
+                        <a href="https://static.simplelogin.co/img/home/gallery/capture_1.png" rel="gallery" class="thumbnail">
+                            <i class="capture_1"></i>
+                        </a>
+                    </li>
+                    <li class="span4">
+                        <a href="https://static.simplelogin.co/img/home/gallery/capture_2.png" rel="gallery" class="thumbnail">
+                            <i class="capture_2"></i>
+                        </a>
+                    </li>
+                    <li class="span4">
+                        <a href="https://static.simplelogin.co/img/home/gallery/capture_3.png" rel="gallery" class="thumbnail">
+                            <i class="capture_3"></i>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="thumbnails">
+                    <li class="span4">
+                        <a href="https://static.simplelogin.co/img/home/gallery/capture_4.png" rel="gallery" class="thumbnail">
+                            <i class="capture_4"></i>
+                        </a>
+                    </li>
+                    <li class="span4">
+                        <a href="https://static.simplelogin.co/img/home/gallery/capture_5.png" rel="gallery" class="thumbnail">
+                            <i class="capture_5"></i>
+                        </a>
+                    </li>
+                    <li class="span4">
+                        <a href="https://static.simplelogin.co/img/home/gallery/capture_6.png" rel="gallery" class="thumbnail">
+                            <i class="capture_6"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <hr>
+
+            <footer class="muted">
+                <div id="social" class="pull-right">
+                    <a href="https://www.facebook.com/SimpleLApp" target="_blank"><img src="https://static.simplelogin.co/img/facebook-24x24.png" alt="Facebook"></a>&nbsp;&nbsp;
+                    <a href="https://www.twitter.com/SimpleLoginApp" target="_blank"><img src="https://static.simplelogin.co/img/twitter-24x24.png" alt="Twitter"></a>&nbsp;&nbsp;
+                    <a href="https://plus.google.com/105680827802309094774" target="_blank"><img src="https://static.simplelogin.co/img/googleplus-24x24.png" alt="Google+"></a>
+                </div>
+                <small>&copy; 2013 SimpleLogin</small>
+            </footer>
+        </div>
+
+        <div id="fb-root"></div>
+        <script src="https://static.simplelogin.co/js/jquery/jquery.js"></script>
+        <script src="https://static.simplelogin.co/js/jquery/fancybox/jquery.fancybox.js"></script>
+        <script src="https://static.simplelogin.co/js/bootstrap.js"></script>
+        <script>
+            // Load the SDK's source Asynchronously
+            (function(d, s, id) {
+              var js, fjs = d.getElementsByTagName(s)[0];
+              if (d.getElementById(id)) return;
+              js = d.createElement(s); js.id = id; js.async = true;
+              js.src = "https://connect.facebook.net/en_US/all.js#xfbml=1&appId=216812425124910";
+              fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+
+
+            // Twitter button
+            !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.async=true;js.src='https://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+
+            // Google +1
+            window.___gcfg = {lang: 'es-419'};
+            (function() {
+            var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+            po.src = 'https://apis.google.com/js/plusone.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+            })();
+
+            // Analytics
+            var _gaq=[["_setAccount","UA-38651303-1"],["_setDomainName","simplelogin.com"],["_trackPageview"]];(function(){var a=document.createElement("script"),b=document.getElementsByTagName("script")[0];a.src="https://ssl.google-analytics.com/ga.js";a.async=!0;b.parentNode.insertBefore(a,b)})();
+
+            $(document).ready(function() {
+                window.scrollTo(0, 1);
+
+                $('#wideo a').fancybox({
+                    maxWidth: 805,
+                    maxHeight: 470
+                });
+
+                $('.thumbnails .thumbnail').fancybox({
+                    openEffect  : 'none',
+                    closeEffect : 'none'
+                });
+            });
+        </script>
+    </body>
+</html>
