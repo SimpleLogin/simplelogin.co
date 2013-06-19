@@ -226,14 +226,34 @@
             $(document).ready(function() {
                 window.scrollTo(0, 1);
 
-                $('#wideo a').fancybox({
-                    maxWidth: 805,
-                    maxHeight: 470
+                $('#wideo a')
+                    .fancybox({
+                        maxWidth: 805,
+                        maxHeight: 470
+                    })
+                    .on('click', function () {
+                        _gaq.push(['_trackEvent', 'Index interest', 'Wideo']);
+                    });
+
+                $('.thumbnails .thumbnail')
+                    .fancybox({
+                        openEffect  : 'none',
+                        closeEffect : 'none'
+                    })
+                    .on('click', function () {
+                        _gaq.push(['_trackEvent', 'Index interest', 'Screenshots']);
+                    });
+
+                $('#signin').on('click', function () {
+                    _gaq.push(['_trackEvent', 'Index interest', 'Top Signin']);
                 });
 
-                $('.thumbnails .thumbnail').fancybox({
-                    openEffect  : 'none',
-                    closeEffect : 'none'
+                $('#android-app').on('click', function () {
+                    _gaq.push(['_trackEvent', 'Index interest', 'Android App']);
+                });
+
+                $('#iphone-app').on('click', function () {
+                    _gaq.push(['_trackEvent', 'Index interest', 'iPhone App']);
                 });
             });
         </script>
