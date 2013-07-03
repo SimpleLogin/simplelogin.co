@@ -25,6 +25,15 @@
         <link rel="stylesheet" href="https://static.simplelogin.co/css/font-awesome.css">
         <link rel="stylesheet" href="https://static.simplelogin.co/js/jquery/fancybox/jquery.fancybox.css">
         <link rel="stylesheet" href="https://static.simplelogin.co/css/main.css">
+
+        <!-- start Mixpanel -->
+        <script type="text/javascript">
+        (function(e,b){if(!b.__SV){var a,f,i,g;window.mixpanel=b;a=e.createElement("script");a.type="text/javascript";a.async=!0;a.src=("https:"===e.location.protocol?"https:":"http:")+'//cdn.mxpnl.com/libs/mixpanel-2.2.min.js';f=e.getElementsByTagName("script")[0];f.parentNode.insertBefore(a,f);b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==
+typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.track_charge people.clear_charges people.delete_user".split(" ");for(g=0;g<i.length;g++)f(c,i[g]);
+        b._i.push([a,e,d])};b.__SV=1.2}})(document,window.mixpanel||[]);
+        mixpanel.init("db220f80a46b9482b328cc39fc3bd1b9");
+        </script>
+        <!-- end Mixpanel -->
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -50,7 +59,7 @@
                             <li><a href="/plans">Planes y precios</a></li>
                             <li><a href="http://blog.simplelogin.co/contact">Contacto</a></li>
                         </ul>
-                        <a href="https://app.simplelogin.co" class="btn pull-right"><i class="icon-ok"></i> Ingresar</a>
+                        <a href="https://app.simplelogin.co" id="signin" class="btn pull-right"><i class="icon-ok"></i> Ingresar</a>
                     </div>
                 </div>
             </div>
@@ -100,10 +109,10 @@
                     </a>
                 </div>
                 <div class="span6" id="download">
-                    <a href="https://play.google.com/store/apps/details?id=com.simplelogin.app" class="span6">
+                    <a href="https://play.google.com/store/apps/details?id=com.simplelogin.app" id="android-app" class="span6">
                         <img src="https://developer.android.com/images/brand/es-419_app_rgb_wo_60.png" alt="Android app on Google Play"><br>
                     </a>
-                    <a href="#" class="span6" title="Muy pronto...">
+                    <a href="#" id="iphone-app" class="span6" title="Muy pronto...">
                         <img src="https://static.simplelogin.co/img/home/app_store_badge.png" alt="App Store">
                     </a>
                 </div>
@@ -232,7 +241,7 @@
                         maxHeight: 470
                     })
                     .on('click', function () {
-                        _gaq.push(['_trackEvent', 'Index interest', 'Wideo']);
+                        _gaq.push(['_trackEvent', 'Index interest', 'View', 'Wideo']);
                     });
 
                 $('.thumbnails .thumbnail')
@@ -241,19 +250,19 @@
                         closeEffect : 'none'
                     })
                     .on('click', function () {
-                        _gaq.push(['_trackEvent', 'Index interest', 'Screenshots']);
+                        _gaq.push(['_trackEvent', 'Index interest', 'View', 'Screenshots']);
                     });
 
                 $('#signin').on('click', function () {
-                    _gaq.push(['_trackEvent', 'Index interest', 'Top Signin']);
+                    _gaq.push(['_trackEvent', 'Index interest', 'View', 'Top Signin']);
                 });
 
                 $('#android-app').on('click', function () {
-                    _gaq.push(['_trackEvent', 'Index interest', 'Android App']);
+                    _gaq.push(['_trackEvent', 'Index interest', 'View', 'Android App']);
                 });
 
                 $('#iphone-app').on('click', function () {
-                    _gaq.push(['_trackEvent', 'Index interest', 'iPhone App']);
+                    _gaq.push(['_trackEvent', 'Index interest', 'View', 'iPhone App']);
                 });
             });
         </script>
