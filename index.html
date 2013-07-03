@@ -242,7 +242,7 @@ typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var
                         maxHeight: 470
                     })
                     .on('click', function () {
-                        _gaq.push(['_trackEvent', 'Index interest', 'View', 'Wideo']);
+                        mixpanel.track('View Wideo');
                     });
 
                 $('.thumbnails .thumbnail')
@@ -251,19 +251,14 @@ typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var
                         closeEffect : 'none'
                     })
                     .on('click', function () {
-                        _gaq.push(['_trackEvent', 'Index interest', 'View', 'Screenshots']);
+                        mixpanel.track('View Screenshots');
                     });
 
-                $('#signin').on('click', function () {
-                    _gaq.push(['_trackEvent', 'Index interest', 'View', 'Top Signin']);
-                });
-
-                $('#android-app').on('click', function () {
-                    _gaq.push(['_trackEvent', 'Index interest', 'View', 'Android App']);
-                });
-
+                // Mixpanel tracking
+                mixpanel.track_links('#signin', 'Signin', { referrer: document.referrer });
+                mixpanel.track_links('#android-app', 'Get Android App', { referrer: document.referrer });
                 $('#iphone-app').on('click', function () {
-                    _gaq.push(['_trackEvent', 'Index interest', 'View', 'iPhone App']);
+                    mixpanel.track('Get iPhone App');
                 });
             });
         </script>
