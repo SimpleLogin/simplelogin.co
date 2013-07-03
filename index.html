@@ -26,14 +26,12 @@
         <link rel="stylesheet" href="https://static.simplelogin.co/js/jquery/fancybox/jquery.fancybox.css">
         <link rel="stylesheet" href="https://static.simplelogin.co/css/main.css">
 
-        <!-- start Mixpanel -->
         <script type="text/javascript">
         (function(e,b){if(!b.__SV){var a,f,i,g;window.mixpanel=b;a=e.createElement("script");a.type="text/javascript";a.async=!0;a.src=("https:"===e.location.protocol?"https:":"http:")+'//cdn.mxpnl.com/libs/mixpanel-2.2.min.js';f=e.getElementsByTagName("script")[0];f.parentNode.insertBefore(a,f);b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==
 typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.track_charge people.clear_charges people.delete_user".split(" ");for(g=0;g<i.length;g++)f(c,i[g]);
         b._i.push([a,e,d])};b.__SV=1.2}})(document,window.mixpanel||[]);
         mixpanel.init("db220f80a46b9482b328cc39fc3bd1b9");
         </script>
-        <!-- end Mixpanel -->
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -53,10 +51,10 @@ typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var
                     </a>
                     <div class="nav-collapse collapse">
                         <ul class="nav">
-                            <li><a href="/security">Seguridad</a></li>
+                            <li><a href="/security" id="security">Seguridad</a></li>
                             <li><a href="http://blog.simplelogin.co">Blog</a></li>
                             <li><a href="http://blog.simplelogin.co/about">Acerca</a></li>
-                            <li><a href="/plans">Planes y precios</a></li>
+                            <li><a href="/plans" id="plans">Planes y precios</a></li>
                             <li><a href="http://blog.simplelogin.co/contact">Contacto</a></li>
                         </ul>
                         <a href="https://app.simplelogin.co" id="signin" class="btn pull-right"><i class="icon-ok"></i> Ingresar</a>
@@ -233,7 +231,7 @@ typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var
             // Analytics
             var _gaq=[["_setAccount","UA-38651303-1"],["_setDomainName","simplelogin.com"],["_trackPageview"]];(function(){var a=document.createElement("script"),b=document.getElementsByTagName("script")[0];a.src="https://ssl.google-analytics.com/ga.js";a.async=!0;b.parentNode.insertBefore(a,b)})();
 
-            $(document).ready(function() {
+            $(document).on('ready', function() {
                 window.scrollTo(0, 1);
 
                 $('#wideo a')
@@ -256,6 +254,8 @@ typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var
 
                 // Mixpanel tracking
                 mixpanel.track_links('#signin', 'Signin', { referrer: document.referrer });
+                mixpanel.track_links('#security', 'Security', { referrer: document.referrer });
+                mixpanel.track_links('#plans', 'Plans', { referrer: document.referrer });
                 mixpanel.track_links('#android-app', 'Get Android App', { referrer: document.referrer });
                 $('#iphone-app').on('click', function () {
                     mixpanel.track('Get iPhone App');
